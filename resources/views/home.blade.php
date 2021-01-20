@@ -11,6 +11,7 @@
 
     </head>
     <body>
+        <h1>Cars section</h1>
         <ul>
             @foreach ($cars as $car)
                 <li>
@@ -21,5 +22,18 @@
             @endforeach
         </ul>
 
+        <section id="app">
+            <h1>Bikes section</h1>
+            <ul>
+                <li v-for="bike in bikes">
+                    <h3>@{{ bike.marca }}</h3>
+                    <p>@{{ bike.modello }}</p>
+                    <p>@{{ bike.targa }}</p>
+                </li>
+            </ul>
+        </section>
+
+        {{-- JS --}}
+        <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
